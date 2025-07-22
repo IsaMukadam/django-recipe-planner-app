@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django migrations
+**/migrations/
+!*/migrations/__init__.py
+
+# Django local settings
+local_settings.py
+settings_local.py
+
+# SQLite database
+*.sqlite3
+
+# Media and static files
+/media/
+/staticfiles/
+/static_root/
+/media_root/
+
+# Django collectstatic output
+/static/
+
+# Node modules (if using with frontend)
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+
+# Test and debug logs
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
