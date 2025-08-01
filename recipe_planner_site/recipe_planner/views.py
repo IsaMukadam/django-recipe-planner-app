@@ -31,7 +31,7 @@ def recipes(request):
         )
         return redirect('/')
     
-    queryset = Recipe.object.all()
+    queryset = Recipe.objects.all()
     if request.GET.get('search'):
         queryset = queryset.filter(day__icontains=request.GET.get('search'))
 
