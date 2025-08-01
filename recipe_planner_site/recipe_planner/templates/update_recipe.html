@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+<!-- Inherit from the base template -->
+
+{% block start %}
+<!-- Start of the block that will be inserted into the 'base.html' template -->
+
+<!-- Bootstrap 4 CSS for styling -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    /* Add your custom styles here if needed */
+</style>
+
+<!-- Main container for the update form -->
+<div class="container mt-5 col-5">
+
+    <!-- Form for updating a recipe -->
+    <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- CSRF token for security -->
+
+        <!-- Input field for Day-Time with pre-filled value from the recipe -->
+        <div class="form-group">
+            <label for="exampleInputEmail1">Day-Time</label>
+            <input type="text" name="day" value="{{ recipe.day }}" required>
+        </div>
+
+        <!-- Input field for Recipe Name with pre-filled value from the recipe -->
+        <div class="form-group">
+            <label for="exampleInputEmail1">Recipe</label>
+            <input name="name" type="text" value="{{ recipe.name }}" required>
+        </div>
+
+        <!-- Textarea for Description with pre-filled value (use content inside textarea, not value attribute) -->
+        <div class="form-group">
+            <label for="exampleInputPassword1">Description</label>
+            <textarea name="description" rows="5" cols="30">{{ recipe.description }}</textarea>
+        </div>
+
+        <br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Update Data</button>
+    </form>
+
+</div>
+
+{% endblock %}
+<!-- End of the block content -->
